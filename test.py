@@ -52,10 +52,6 @@ class TestValidateList(unittest.TestCase):
         del data[30:]
         res = validateList(data)
         self.assertTrue(res)
-        
-        data = list(string.ascii_letters)
-        while len(data) > 30:
-            data.pop()
 
 if __name__ == "__main__":
     unittest.main()
