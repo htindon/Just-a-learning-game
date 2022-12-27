@@ -38,3 +38,28 @@ def validateList(item_list):
         return False
     print("List validated")
     return True
+
+def createDeck(validList):
+    '''
+    A deck is basically a list of tuples.
+    Each deck has to start with a first card.
+    This first card is made of the first 6 elements of the input list.
+    '''
+    firstCard = tuple(validList[:6])
+    newDeck = []
+    newDeck.append(firstCard)
+    return(newDeck)
+
+def createCard(itemList):
+    '''
+    This function will turn a list of items into a card.
+    However, for now a card is just a list of elements.
+    '''
+    return(tuple(itemList))
+
+def addCardToDeck(card, deck):
+    '''
+    This function will insert an existing card into an existing deck.
+    '''
+    deck.append(card)
+    return(deck)
